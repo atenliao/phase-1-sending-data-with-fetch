@@ -7,7 +7,7 @@ const submitData = (username, useremail)=> {
         email:`${useremail}`
     }
     const configureObj = {
-        // method:"POST",
+        method:"POST",
         headers:{
             "Content-Type":"application/json",
             "accept":"application/json",
@@ -21,15 +21,14 @@ const submitData = (username, useremail)=> {
      .then(function (object){
        
        body.innerHTML = `id is ${object.id}`;
-        console.log(object.id)
+    
      })
      .catch(function (error){
-        // const div = document.createElement('div');
-        // div.innerText = error.message
+
         body.innerHTML = error.message;
         
      })
     
 };
 
-submitData("john","john@gmail.com")
+// submitData("john","john@gmail.com")
